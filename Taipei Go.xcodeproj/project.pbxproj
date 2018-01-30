@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		024F2CDDA6EA59E380C88D55 /* Pods_Taipei_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAE93BEAF3003525821F54 /* Pods_Taipei_Go.framework */; };
 		568A534A202044C400268DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A5349202044C400268DBE /* AppDelegate.swift */; };
-		568A534C202044C400268DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A534B202044C400268DBE /* ViewController.swift */; };
-		568A534F202044C400268DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A534D202044C400268DBE /* Main.storyboard */; };
+		568A534C202044C400268DBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A534B202044C400268DBE /* MainViewController.swift */; };
+		568A534F202044C400268DBE /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A534D202044C400268DBE /* MainViewController.storyboard */; };
 		568A5351202044C400268DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568A5350202044C400268DBE /* Assets.xcassets */; };
 		568A5354202044C400268DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A5352202044C400268DBE /* LaunchScreen.storyboard */; };
 		568A535F202044C400268DBE /* Taipei_GoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A535E202044C400268DBE /* Taipei_GoTests.swift */; };
+		568A536C2020539A00268DBE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 568A536B2020539A00268DBE /* Info.plist */; };
+		568A536E2020554400268DBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A536D2020554400268DBE /* DetailViewController.swift */; };
+		568A53702020555E00268DBE /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A536F2020555E00268DBE /* DetailViewController.storyboard */; };
 		A108A40A59790912CC4D5E5D /* Pods_Taipei_GoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,14 +33,16 @@
 /* Begin PBXFileReference section */
 		568A5346202044C400268DBE /* Taipei Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taipei Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A5349202044C400268DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		568A534B202044C400268DBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		568A534E202044C400268DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		568A534B202044C400268DBE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		568A534E202044C400268DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
 		568A5350202044C400268DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		568A5353202044C400268DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		568A5355202044C400268DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		568A535A202044C400268DBE /* Taipei GoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Taipei GoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A535E202044C400268DBE /* Taipei_GoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taipei_GoTests.swift; sourceTree = "<group>"; };
 		568A5360202044C400268DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568A536B2020539A00268DBE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568A536D2020554400268DBE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		568A536F2020555E00268DBE /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei Go.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go.release.xcconfig"; sourceTree = "<group>"; };
 		A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei GoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taipei_GoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,11 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				568A5349202044C400268DBE /* AppDelegate.swift */,
-				568A534B202044C400268DBE /* ViewController.swift */,
-				568A534D202044C400268DBE /* Main.storyboard */,
-				568A5350202044C400268DBE /* Assets.xcassets */,
-				568A5352202044C400268DBE /* LaunchScreen.storyboard */,
-				568A5355202044C400268DBE /* Info.plist */,
+				568A53692020530F00268DBE /* ViewControllers */,
+				568A536A2020532D00268DBE /* Support Files */,
 			);
 			path = "Taipei Go";
 			sourceTree = "<group>";
@@ -117,6 +119,27 @@
 				568A5360202044C400268DBE /* Info.plist */,
 			);
 			path = "Taipei GoTests";
+			sourceTree = "<group>";
+		};
+		568A53692020530F00268DBE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				568A536F2020555E00268DBE /* DetailViewController.storyboard */,
+				568A536D2020554400268DBE /* DetailViewController.swift */,
+				568A534D202044C400268DBE /* MainViewController.storyboard */,
+				568A534B202044C400268DBE /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		568A536A2020532D00268DBE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				568A5352202044C400268DBE /* LaunchScreen.storyboard */,
+				568A5350202044C400268DBE /* Assets.xcassets */,
+				568A536B2020539A00268DBE /* Info.plist */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		746463A594D3B1892CA324F5 /* Frameworks */ = {
@@ -217,9 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568A536C2020539A00268DBE /* Info.plist in Resources */,
 				568A5354202044C400268DBE /* LaunchScreen.storyboard in Resources */,
+				568A53702020555E00268DBE /* DetailViewController.storyboard in Resources */,
 				568A5351202044C400268DBE /* Assets.xcassets in Resources */,
-				568A534F202044C400268DBE /* Main.storyboard in Resources */,
+				568A534F202044C400268DBE /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				568A534C202044C400268DBE /* ViewController.swift in Sources */,
+				568A536E2020554400268DBE /* DetailViewController.swift in Sources */,
+				568A534C202044C400268DBE /* MainViewController.swift in Sources */,
 				568A534A202044C400268DBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,12 +389,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		568A534D202044C400268DBE /* Main.storyboard */ = {
+		568A534D202044C400268DBE /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				568A534E202044C400268DBE /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		568A5352202044C400268DBE /* LaunchScreen.storyboard */ = {
@@ -496,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2BW4UK926;
-				INFOPLIST_FILE = "Taipei Go/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Taipei Go/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TeChengHung.Taipei-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,7 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2BW4UK926;
-				INFOPLIST_FILE = "Taipei Go/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Taipei Go/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TeChengHung.Taipei-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
