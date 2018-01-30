@@ -6,6 +6,7 @@ target 'Taipei Go' do
   use_frameworks!
 
   # Pods for Taipei Go
+    pod 'Alamofire', '~> 4.0'
 
   target 'Taipei GoTests' do
     inherit! :search_paths

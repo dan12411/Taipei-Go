@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024F2CDDA6EA59E380C88D55 /* Pods_Taipei_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAE93BEAF3003525821F54 /* Pods_Taipei_Go.framework */; };
 		568A534A202044C400268DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A5349202044C400268DBE /* AppDelegate.swift */; };
 		568A534C202044C400268DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A534B202044C400268DBE /* ViewController.swift */; };
 		568A534F202044C400268DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A534D202044C400268DBE /* Main.storyboard */; };
 		568A5351202044C400268DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568A5350202044C400268DBE /* Assets.xcassets */; };
 		568A5354202044C400268DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A5352202044C400268DBE /* LaunchScreen.storyboard */; };
 		568A535F202044C400268DBE /* Taipei_GoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A535E202044C400268DBE /* Taipei_GoTests.swift */; };
+		A108A40A59790912CC4D5E5D /* Pods_Taipei_GoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		568A535A202044C400268DBE /* Taipei GoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Taipei GoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A535E202044C400268DBE /* Taipei_GoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taipei_GoTests.swift; sourceTree = "<group>"; };
 		568A5360202044C400268DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei Go.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go.release.xcconfig"; sourceTree = "<group>"; };
+		A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei GoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taipei_GoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85FEC815283C2BFA10A0958 /* Pods-Taipei Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go.debug.xcconfig"; sourceTree = "<group>"; };
+		E9CE329E85ABEED103816F77 /* Pods-Taipei GoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei GoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests.release.xcconfig"; sourceTree = "<group>"; };
+		FBCAE93BEAF3003525821F54 /* Pods_Taipei_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taipei_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024F2CDDA6EA59E380C88D55 /* Pods_Taipei_Go.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A108A40A59790912CC4D5E5D /* Pods_Taipei_GoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350F9ADA4530C2F26DE34322 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D85FEC815283C2BFA10A0958 /* Pods-Taipei Go.debug.xcconfig */,
+				5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */,
+				A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */,
+				E9CE329E85ABEED103816F77 /* Pods-Taipei GoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		568A533D202044C400268DBE = {
 			isa = PBXGroup;
 			children = (
 				568A5348202044C400268DBE /* Taipei Go */,
 				568A535D202044C400268DBE /* Taipei GoTests */,
 				568A5347202044C400268DBE /* Products */,
+				350F9ADA4530C2F26DE34322 /* Pods */,
+				746463A594D3B1892CA324F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +119,15 @@
 			path = "Taipei GoTests";
 			sourceTree = "<group>";
 		};
+		746463A594D3B1892CA324F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBCAE93BEAF3003525821F54 /* Pods_Taipei_Go.framework */,
+				AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 568A5363202044C400268DBE /* Build configuration list for PBXNativeTarget "Taipei Go" */;
 			buildPhases = (
+				7860AC1FCF4582F2B24FE3FF /* [CP] Check Pods Manifest.lock */,
 				568A5342202044C400268DBE /* Sources */,
 				568A5343202044C400268DBE /* Frameworks */,
 				568A5344202044C400268DBE /* Resources */,
+				43BC5BC5B19CEE0B0FD212C5 /* [CP] Embed Pods Frameworks */,
+				B6F82CE10993F549C37040F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 568A5366202044C400268DBE /* Build configuration list for PBXNativeTarget "Taipei GoTests" */;
 			buildPhases = (
+				B73BE9065FA10421937BC3FC /* [CP] Check Pods Manifest.lock */,
 				568A5356202044C400268DBE /* Sources */,
 				568A5357202044C400268DBE /* Frameworks */,
 				568A5358202044C400268DBE /* Resources */,
+				A0CA37920C7944D15BC27FCD /* [CP] Embed Pods Frameworks */,
+				7365CE98BBB38B70A8C23F88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43BC5BC5B19CEE0B0FD212C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7365CE98BBB38B70A8C23F88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7860AC1FCF4582F2B24FE3FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Taipei Go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CA37920C7944D15BC27FCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F82CE10993F549C37040F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B73BE9065FA10421937BC3FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Taipei GoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		568A5342202044C400268DBE /* Sources */ = {
@@ -351,6 +491,7 @@
 		};
 		568A5364202044C400268DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85FEC815283C2BFA10A0958 /* Pods-Taipei Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +507,7 @@
 		};
 		568A5365202044C400268DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +523,7 @@
 		};
 		568A5367202044C400268DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -398,6 +541,7 @@
 		};
 		568A5368202044C400268DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9CE329E85ABEED103816F77 /* Pods-Taipei GoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
