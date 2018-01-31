@@ -18,13 +18,20 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = viewModel.title
+        self.viewModel.fetchData { [unowned self] data in
+            self.viewModel.dataSource = data
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
         NetworkChecker.shared.setupReachability(viewController: self, reachableAction: {
-            self.viewModel.fetchData()
+            self.viewModel.fetchData { [unowned self] data in
+                self.viewModel.dataSource = data
+                self.tableView.reloadData()
+            }
         })
         
     }
@@ -38,7 +45,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
