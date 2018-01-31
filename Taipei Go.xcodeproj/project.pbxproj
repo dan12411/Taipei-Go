@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		024F2CDDA6EA59E380C88D55 /* Pods_Taipei_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAE93BEAF3003525821F54 /* Pods_Taipei_Go.framework */; };
+		5663FEB420219795004EA8A0 /* DataTaipei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEB320219795004EA8A0 /* DataTaipei.swift */; };
+		5663FEB820219A5F004EA8A0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEB720219A5F004EA8A0 /* NetworkService.swift */; };
+		5663FEBA2021A072004EA8A0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEB92021A072004EA8A0 /* NetworkError.swift */; };
 		568A534A202044C400268DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A5349202044C400268DBE /* AppDelegate.swift */; };
 		568A534C202044C400268DBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A534B202044C400268DBE /* MainViewController.swift */; };
 		568A534F202044C400268DBE /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A534D202044C400268DBE /* MainViewController.storyboard */; };
@@ -31,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5663FEB320219795004EA8A0 /* DataTaipei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaipei.swift; sourceTree = "<group>"; };
+		5663FEB720219A5F004EA8A0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5663FEB92021A072004EA8A0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		568A5346202044C400268DBE /* Taipei Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taipei Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A5349202044C400268DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568A534B202044C400268DBE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5663FEB52021979C004EA8A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5663FEB6202197AA004EA8A0 /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5663FEB6202197AA004EA8A0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5663FEB320219795004EA8A0 /* DataTaipei.swift */,
+				5663FEB720219A5F004EA8A0 /* NetworkService.swift */,
+				5663FEB92021A072004EA8A0 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		568A533D202044C400268DBE = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				568A5349202044C400268DBE /* AppDelegate.swift */,
+				5663FEB52021979C004EA8A0 /* Model */,
 				568A53692020530F00268DBE /* ViewControllers */,
 				568A536A2020532D00268DBE /* Support Files */,
 			);
@@ -364,7 +389,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5663FEB820219A5F004EA8A0 /* NetworkService.swift in Sources */,
 				568A536E2020554400268DBE /* DetailViewController.swift in Sources */,
+				5663FEB420219795004EA8A0 /* DataTaipei.swift in Sources */,
+				5663FEBA2021A072004EA8A0 /* NetworkError.swift in Sources */,
 				568A534C202044C400268DBE /* MainViewController.swift in Sources */,
 				568A534A202044C400268DBE /* AppDelegate.swift in Sources */,
 			);
