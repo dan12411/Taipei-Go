@@ -10,6 +10,8 @@ import Foundation
 
 struct DataTaipeiViewModel {
     
+    let title: String = "台北市熱門景點"
+    
     func fetchData() {
         let request = DataTaipei.Entertainment.TouristSites(rid: "36847f3f-deff-4183-a5bb-800737591de5", limit: 1)
         

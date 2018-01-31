@@ -14,6 +14,7 @@
 		5663FEBC2021A79B004EA8A0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEBB2021A79B004EA8A0 /* Response.swift */; };
 		566FBF562021C0B000E52830 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FBF552021C0B000E52830 /* NetworkChecker.swift */; };
 		566FBF582021CB2600E52830 /* DataTaipeiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FBF572021CB2600E52830 /* DataTaipeiViewModel.swift */; };
+		566FBF5A2021CD6900E52830 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FBF592021CD6900E52830 /* UIColor+Extension.swift */; };
 		568A534A202044C400268DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A5349202044C400268DBE /* AppDelegate.swift */; };
 		568A534C202044C400268DBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A534B202044C400268DBE /* MainViewController.swift */; };
 		568A534F202044C400268DBE /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A534D202044C400268DBE /* MainViewController.storyboard */; };
@@ -43,6 +44,7 @@
 		5663FEBB2021A79B004EA8A0 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		566FBF552021C0B000E52830 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		566FBF572021CB2600E52830 /* DataTaipeiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaipeiViewModel.swift; sourceTree = "<group>"; };
+		566FBF592021CD6900E52830 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		568A5346202044C400268DBE /* Taipei Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taipei Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A5349202044C400268DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568A534B202044C400268DBE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				568A5349202044C400268DBE /* AppDelegate.swift */,
+				566FBF592021CD6900E52830 /* UIColor+Extension.swift */,
 				5663FEC12021BEA1004EA8A0 /* ViewModels */,
 				5663FEB52021979C004EA8A0 /* Model */,
 				568A53692020530F00268DBE /* ViewControllers */,
@@ -415,6 +418,7 @@
 				568A534C202044C400268DBE /* MainViewController.swift in Sources */,
 				568A534A202044C400268DBE /* AppDelegate.swift in Sources */,
 				5663FEBC2021A79B004EA8A0 /* Response.swift in Sources */,
+				566FBF5A2021CD6900E52830 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
