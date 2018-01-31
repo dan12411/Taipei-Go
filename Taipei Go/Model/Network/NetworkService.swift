@@ -19,7 +19,6 @@ public struct NetworkRequest {
     
     private static let sessionManager: SessionManager = {
         let sessionManager = SessionManager(configuration: sessionConfig)
-//        sessionManager.retrier = Retrier.shared
         return sessionManager
     }()
     
@@ -39,7 +38,7 @@ public struct NetworkRequest {
     }
     
     @discardableResult
-    public func fire<T>(onSuccess: ((T) -> Void)? = nil, onFailure: ((NetworkError) -> Void)? = nil) -> DataRequest where T : Codable {
+    public func fire(onSuccess: ((Results) -> Void)? = nil, onFailure: ((NetworkError) -> Void)? = nil) -> DataRequest {
         
         let requestOpt = NetworkRequest.sessionManager.request(self).validate().responseData { (response) in
             switch response.result {
@@ -47,8 +46,7 @@ public struct NetworkRequest {
                 onFailure?(NetworkError.Connection)
             case .success:
                 if let data = response.data {
-//                    Reply.process(data, success: onSuccess, fail: onFailure)
-                    print("get data!")
+                    NetworkReply.process(data, success: onSuccess, fail: onFailure)
                 } else {
                     onFailure?(NetworkError.UnrecognizableResult)
                 }
@@ -64,5 +62,17 @@ extension NetworkRequest: URLRequestConvertible {
         var urlRequest = try JSONEncoding.default.encode(URLRequest(url: self.createURLWithComponents()), with: request.parameters)
         urlRequest.httpMethod = request.method.rawValue
         return urlRequest
+    }
+}
+
+public struct NetworkReply {
+    
+    static func process(_ result: Data, success: ((Results) -> Void)? = nil, fail: ((NetworkError) -> Void)? = nil) {
+        do {
+            let response = try JSONDecoder().decode(Response.self, from: result)
+                success?(response.result)
+        } catch {
+            fail?(NetworkError.UnrecognizableResult)
+        }
     }
 }

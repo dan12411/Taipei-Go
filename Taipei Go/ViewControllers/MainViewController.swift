@@ -12,15 +12,17 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchData()
     }
     
     func fetchData() {
         let request = DataTaipei.Entertainment.TouristSites(rid: "36847f3f-deff-4183-a5bb-800737591de5", limit: 1)
         
-        NetworkRequest(request).fire(onSuccess: { (response: String) in
-            print("response")
+        NetworkRequest(request).fire(onSuccess: { (response: Results) in
+            print(response)
         }, onFailure: { (error: NetworkError) in
-            
+            print(error.description)
         })
     }
 

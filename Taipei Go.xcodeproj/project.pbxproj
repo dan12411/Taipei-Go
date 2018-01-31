@@ -11,6 +11,7 @@
 		5663FEB420219795004EA8A0 /* DataTaipei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEB320219795004EA8A0 /* DataTaipei.swift */; };
 		5663FEB820219A5F004EA8A0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEB720219A5F004EA8A0 /* NetworkService.swift */; };
 		5663FEBA2021A072004EA8A0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEB92021A072004EA8A0 /* NetworkError.swift */; };
+		5663FEBC2021A79B004EA8A0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663FEBB2021A79B004EA8A0 /* Response.swift */; };
 		568A534A202044C400268DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A5349202044C400268DBE /* AppDelegate.swift */; };
 		568A534C202044C400268DBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A534B202044C400268DBE /* MainViewController.swift */; };
 		568A534F202044C400268DBE /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A534D202044C400268DBE /* MainViewController.storyboard */; };
@@ -37,6 +38,7 @@
 		5663FEB320219795004EA8A0 /* DataTaipei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaipei.swift; sourceTree = "<group>"; };
 		5663FEB720219A5F004EA8A0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5663FEB92021A072004EA8A0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		5663FEBB2021A79B004EA8A0 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		568A5346202044C400268DBE /* Taipei Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taipei Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A5349202044C400268DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568A534B202044C400268DBE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				5663FEB320219795004EA8A0 /* DataTaipei.swift */,
-				5663FEB720219A5F004EA8A0 /* NetworkService.swift */,
 				5663FEB92021A072004EA8A0 /* NetworkError.swift */,
+				5663FEB720219A5F004EA8A0 /* NetworkService.swift */,
+				5663FEBB2021A79B004EA8A0 /* Response.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				5663FEBA2021A072004EA8A0 /* NetworkError.swift in Sources */,
 				568A534C202044C400268DBE /* MainViewController.swift in Sources */,
 				568A534A202044C400268DBE /* AppDelegate.swift in Sources */,
+				5663FEBC2021A79B004EA8A0 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
