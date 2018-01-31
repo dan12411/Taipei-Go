@@ -9,21 +9,21 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    private lazy var viewModel: DataTaipeiViewModel = DataTaipeiViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchData()
     }
     
-    func fetchData() {
-        let request = DataTaipei.Entertainment.TouristSites(rid: "36847f3f-deff-4183-a5bb-800737591de5", limit: 1)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
-        NetworkRequest(request).fire(onSuccess: { (response: Results) in
-            print(response)
-        }, onFailure: { (error: NetworkError) in
-            print(error.description)
+        NetworkChecker.shared.setupReachability(viewController: self, reachableAction: {
+            self.viewModel.fetchData()
         })
+        
     }
 
 }
