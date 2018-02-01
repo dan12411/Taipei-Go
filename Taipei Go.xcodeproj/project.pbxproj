@@ -24,6 +24,7 @@
 		568A536C2020539A00268DBE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 568A536B2020539A00268DBE /* Info.plist */; };
 		568A536E2020554400268DBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A536D2020554400268DBE /* DetailViewController.swift */; };
 		568A53702020555E00268DBE /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A536F2020555E00268DBE /* DetailViewController.storyboard */; };
+		56ADF6142022C12C009EEA47 /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADF6132022C12C009EEA47 /* Notifier.swift */; };
 		A108A40A59790912CC4D5E5D /* Pods_Taipei_GoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		568A536B2020539A00268DBE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		568A536D2020554400268DBE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		568A536F2020555E00268DBE /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		56ADF6132022C12C009EEA47 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
 		5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei Go.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go.release.xcconfig"; sourceTree = "<group>"; };
 		A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei GoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taipei_GoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				5663FEB6202197AA004EA8A0 /* Network */,
+				56ADF6152022C131009EEA47 /* Notifier */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,14 @@
 				568A536B2020539A00268DBE /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		56ADF6152022C131009EEA47 /* Notifier */ = {
+			isa = PBXGroup;
+			children = (
+				56ADF6132022C12C009EEA47 /* Notifier.swift */,
+			);
+			path = Notifier;
 			sourceTree = "<group>";
 		};
 		746463A594D3B1892CA324F5 /* Frameworks */ = {
@@ -410,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				566FBF582021CB2600E52830 /* DataTaipeiViewModel.swift in Sources */,
+				56ADF6142022C12C009EEA47 /* Notifier.swift in Sources */,
 				5663FEB820219A5F004EA8A0 /* NetworkService.swift in Sources */,
 				566FBF562021C0B000E52830 /* NetworkChecker.swift in Sources */,
 				568A536E2020554400268DBE /* DetailViewController.swift in Sources */,

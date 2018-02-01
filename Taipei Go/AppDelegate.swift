@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        NetworkChecker.shared.startMonitoring()
+    }
+    func applicationWillEnterForeground(_ application: UIApplication){
+        NetworkChecker.shared.stopMonitoring()
+    }
 
 }
 

@@ -16,21 +16,27 @@ final class NetworkChecker {
     
     let reachability = NetworkReachabilityManager()
     
-    func setupReachability(viewController: UIViewController, reachableAction: (() -> Void)? = nil) {
+    var isReachable: Bool {
+        guard let status = reachability?.isReachable else { return false }
+        return status
+    }
+    
+    func startMonitoring() {
         
         reachability?.listener = { status in
             switch status {
             case .reachable(_), .unknown:
-                guard let action = reachableAction else { return }
-                DispatchQueue.main.async {
-                    action()
-                }
+                Notifier.NetworkConnection.post(object: nil, userInfo: nil)
             case .notReachable:
-                self.showAlert(from: viewController)
+                Notifier.NetworkDisconnection.post(object: nil, userInfo: nil)
             }
         }
         
         reachability?.startListening()
+    }
+    
+    func stopMonitoring() {
+        reachability?.stopListening()
     }
     
     func showAlert(from viewController: UIViewController) {
