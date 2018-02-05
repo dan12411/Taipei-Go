@@ -11,10 +11,12 @@ import UIKit
 class TouristSiteTableViewCell: UITableViewCell, BindView {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     func bindViewModel(_ dataModel: Any) {
         guard let viewModel = dataModel as? TouristSiteViewModel else { return }
         titleLabel.text = viewModel.cellTitle
+        descriptionLabel.text = viewModel.description
     }
 
     override func awakeFromNib() {
