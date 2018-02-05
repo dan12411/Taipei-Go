@@ -8,13 +8,18 @@
 
 import Foundation
 
-class DataTaipeiViewModel {
+class TouristSiteViewModel {
     
     var dataSource: [Result] = []
     var limit: Int = 5
     let title: String = "台北市熱門景點"
+    var cellTitle: String = ""
     
     init() {}
+    
+    init(data: Result) {
+        self.cellTitle = data.stitle
+    }
     
     func fetchData(completionHandler: @escaping (([Result])->Void)) {
         let request = DataTaipei.Entertainment.TouristSites(rid: "36847f3f-deff-4183-a5bb-800737591de5", limit: limit)

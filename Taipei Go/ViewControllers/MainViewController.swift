@@ -12,7 +12,9 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private lazy var viewModel: DataTaipeiViewModel = DataTaipeiViewModel()
+    fileprivate lazy var touristSiteViewModel = TouristSiteViewModel()
+    fileprivate var dataSource: [Result] = []
+    fileprivate var tableHelper: TableViewHelper?
     
     fileprivate func addNotification() {
         Notifier.NetworkConnection.addObserver(by: self, with: #selector(networkConnection), object: nil)
@@ -33,8 +35,13 @@ class MainViewController: UIViewController {
     }
     
     @objc func networkConnection() {
-        self.viewModel.fetchData { [unowned self] data in
-            self.viewModel.dataSource = data
+        self.touristSiteViewModel.fetchData { [unowned self] data in
+            self.dataSource = data
+            let tableViewDataSource: [TouristSiteViewModel] = data.map { TouristSiteViewModel(data: $0) }
+            self.tableHelper = TableViewHelper(
+                tableView: self.tableView,
+                nibName: "TouristSiteTableViewCell",
+                source: tableViewDataSource as [AnyObject])
             self.tableView.reloadData()
         }
     }
@@ -48,7 +55,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = viewModel.title
+        self.title = touristSiteViewModel.title
         addNotification()
         checkNetworkStatus()
     }
@@ -63,23 +70,23 @@ class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.dataSource.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-}
-
-extension MainViewController: UITableViewDelegate {
-    
-}
+//extension MainViewController: UITableViewDataSource {
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return viewModel.dataSource.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return UITableViewCell()
+//    }
+//
+//}
+//
+//extension MainViewController: UITableViewDelegate {
+//
+//}
 
