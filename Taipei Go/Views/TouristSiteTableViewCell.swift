@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TouristSiteTableViewCell: UITableViewCell, BindView {
     
@@ -23,51 +24,45 @@ class TouristSiteTableViewCell: UITableViewCell, BindView {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    fileprivate var collectionViewHelper: CollectionViewHelper?
+    var imageURLs: [String] = []
+    var imageViews: [UIImageView] = []
+    
     func bindViewModel(_ dataModel: Any) {
         guard let viewModel = dataModel as? TouristSiteViewModel else { return }
         titleLabel.text = viewModel.cellTitle
         descriptionLabel.text = viewModel.description
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
         
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-    
-}
-
-extension TouristSiteTableViewCell: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.image = UIImageView(image: UIImage(named: "test"))
-        return cell
-    }
-    
-}
-
-extension TouristSiteTableViewCell: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 40 - 10)/2
-        let height = CGFloat(130)
+        DispatchQueue.main.async {
+            let imageKey: String = "http://www.travel.taipei/d_upload_ttn/sceneadmin/"
+            self.imageURLs = viewModel.imageURL.components(separatedBy: imageKey)
+            let urls = self.imageURLs.lazy
+                .filter { $0.contains(".jpg") || $0.contains(".JPG") }
+                .flatMap { URL(string: imageKey + $0) }
+            var collectionViewDataSource: [CollectionViewModel] = []
+            
+            urls.forEach {
+                let imageView = UIImageView()
+                imageView.kf.setImage(with: $0)
+                self.imageViews.append(imageView)
+                collectionViewDataSource.append(CollectionViewModel(data: imageView))
+            }
+            
+            self.collectionViewHelper = CollectionViewHelper(
+                collectionView: self.collectionView,
+                source: collectionViewDataSource ,
+                nibName: "CollectionViewCell",
+                selectionAction: nil
+            )
+            
+            if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                let width = (UIScreen.main.bounds.width - 40 - 10)/2
+                let height = CGFloat(130)
+                flowLayout.itemSize = CGSize(width: width, height: height)
+            }
+        }
         
-        return CGSize(width: width, height: height)
     }
     
 }
+

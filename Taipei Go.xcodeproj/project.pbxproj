@@ -30,6 +30,8 @@
 		56D6A0A52022EB5200DADE2A /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */; };
 		56F2DFF3202950CD00A15067 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2DFF1202950CD00A15067 /* CollectionViewCell.swift */; };
 		56F2DFF4202950CD00A15067 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F2DFF2202950CD00A15067 /* CollectionViewCell.xib */; };
+		56F2DFF820297FFA00A15067 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2DFF720297FFA00A15067 /* CollectionViewHelper.swift */; };
+		56F2DFFA2029827F00A15067 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2DFF92029827F00A15067 /* CollectionViewModel.swift */; };
 		A108A40A59790912CC4D5E5D /* Pods_Taipei_GoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
 		56F2DFF1202950CD00A15067 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		56F2DFF2202950CD00A15067 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		56F2DFF720297FFA00A15067 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
+		56F2DFF92029827F00A15067 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei Go.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go.release.xcconfig"; sourceTree = "<group>"; };
 		A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei GoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taipei_GoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +137,7 @@
 			children = (
 				566FBF552021C0B000E52830 /* NetworkChecker.swift */,
 				566FBF572021CB2600E52830 /* TouristSiteViewModel.swift */,
+				56F2DFF92029827F00A15067 /* CollectionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				568A5349202044C400268DBE /* AppDelegate.swift */,
 				566FBF592021CD6900E52830 /* UIColor+Extension.swift */,
 				56D6A0A02022EA3500DADE2A /* TableViewHelper.swift */,
+				56F2DFF720297FFA00A15067 /* CollectionViewHelper.swift */,
 				56D6A0A62022EB5B00DADE2A /* Views */,
 				5663FEC12021BEA1004EA8A0 /* ViewModels */,
 				5663FEB52021979C004EA8A0 /* Model */,
@@ -347,10 +353,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -447,6 +455,7 @@
 			files = (
 				566FBF582021CB2600E52830 /* TouristSiteViewModel.swift in Sources */,
 				56ADF6142022C12C009EEA47 /* Notifier.swift in Sources */,
+				56F2DFF820297FFA00A15067 /* CollectionViewHelper.swift in Sources */,
 				5663FEB820219A5F004EA8A0 /* NetworkService.swift in Sources */,
 				566FBF562021C0B000E52830 /* NetworkChecker.swift in Sources */,
 				568A536E2020554400268DBE /* DetailViewController.swift in Sources */,
@@ -456,6 +465,7 @@
 				56D6A0A12022EA3500DADE2A /* TableViewHelper.swift in Sources */,
 				568A534C202044C400268DBE /* MainViewController.swift in Sources */,
 				56F2DFF3202950CD00A15067 /* CollectionViewCell.swift in Sources */,
+				56F2DFFA2029827F00A15067 /* CollectionViewModel.swift in Sources */,
 				568A534A202044C400268DBE /* AppDelegate.swift in Sources */,
 				5663FEBC2021A79B004EA8A0 /* Response.swift in Sources */,
 				566FBF5A2021CD6900E52830 /* UIColor+Extension.swift in Sources */,

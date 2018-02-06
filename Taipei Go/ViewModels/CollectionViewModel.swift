@@ -1,0 +1,19 @@
+
+//
+//  CollectionViewModel.swift
+//  Taipei Go
+//
+//  Created by 洪德晟 on 06/02/2018.
+//  Copyright © 2018 Dan. All rights reserved.
+//
+
+import UIKit
+
+class CollectionViewModel {
+    
+    var image: UIImage?
+    
+    init(data: UIImageView) {
+        self.image = data.image
+    }
+}

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell, BindView {
 
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    func bindViewModel(_ dataModel: Any) {
+        guard let viewModel = dataModel as? CollectionViewModel else { return }
+        self.imageView.image = viewModel.image
     }
 
 }
