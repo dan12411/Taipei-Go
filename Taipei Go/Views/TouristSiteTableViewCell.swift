@@ -10,8 +10,16 @@ import UIKit
 
 class TouristSiteTableViewCell: UITableViewCell, BindView {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.textColor = UIColor(netHex: 0x666666)
+        }
+    }
+    @IBOutlet weak var descriptionLabel: UILabel! {
+        didSet {
+            descriptionLabel.textColor = UIColor(netHex: 0x686868)
+        }
+    }
     
     func bindViewModel(_ dataModel: Any) {
         guard let viewModel = dataModel as? TouristSiteViewModel else { return }

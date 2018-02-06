@@ -121,7 +121,7 @@ class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectAction!(indexPath.row)
+        self.selectAction?(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
