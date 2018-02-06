@@ -28,6 +28,8 @@
 		56D6A0A12022EA3500DADE2A /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6A0A02022EA3500DADE2A /* TableViewHelper.swift */; };
 		56D6A0A42022EB5200DADE2A /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6A0A22022EB5200DADE2A /* TouristSiteTableViewCell.swift */; };
 		56D6A0A52022EB5200DADE2A /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */; };
+		56F2DFF3202950CD00A15067 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2DFF1202950CD00A15067 /* CollectionViewCell.swift */; };
+		56F2DFF4202950CD00A15067 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F2DFF2202950CD00A15067 /* CollectionViewCell.xib */; };
 		A108A40A59790912CC4D5E5D /* Pods_Taipei_GoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		56D6A0A02022EA3500DADE2A /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		56D6A0A22022EB5200DADE2A /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
+		56F2DFF1202950CD00A15067 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		56F2DFF2202950CD00A15067 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		5ED8DD7C58A1AD907AF41EDA /* Pods-Taipei Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei Go.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei Go/Pods-Taipei Go.release.xcconfig"; sourceTree = "<group>"; };
 		A1B9EE0030ACB66ADF6D4CC5 /* Pods-Taipei GoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taipei GoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taipei GoTests/Pods-Taipei GoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD45E74595F4DBC9E3EF2628 /* Pods_Taipei_GoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taipei_GoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +215,8 @@
 			children = (
 				56D6A0A22022EB5200DADE2A /* TouristSiteTableViewCell.swift */,
 				56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */,
+				56F2DFF1202950CD00A15067 /* CollectionViewCell.swift */,
+				56F2DFF2202950CD00A15067 /* CollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				568A536C2020539A00268DBE /* Info.plist in Resources */,
+				56F2DFF4202950CD00A15067 /* CollectionViewCell.xib in Resources */,
 				568A5354202044C400268DBE /* LaunchScreen.storyboard in Resources */,
 				568A53702020555E00268DBE /* DetailViewController.storyboard in Resources */,
 				56D6A0A52022EB5200DADE2A /* TouristSiteTableViewCell.xib in Resources */,
@@ -448,6 +455,7 @@
 				5663FEBA2021A072004EA8A0 /* NetworkError.swift in Sources */,
 				56D6A0A12022EA3500DADE2A /* TableViewHelper.swift in Sources */,
 				568A534C202044C400268DBE /* MainViewController.swift in Sources */,
+				56F2DFF3202950CD00A15067 /* CollectionViewCell.swift in Sources */,
 				568A534A202044C400268DBE /* AppDelegate.swift in Sources */,
 				5663FEBC2021A79B004EA8A0 /* Response.swift in Sources */,
 				566FBF5A2021CD6900E52830 /* UIColor+Extension.swift in Sources */,

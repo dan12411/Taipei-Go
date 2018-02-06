@@ -15,12 +15,14 @@ class TouristSiteViewModel {
     let title: String = "台北市熱門景點"
     var cellTitle: String = ""
     var description: String = ""
+    var imageURL: String = ""
     
     init() {}
     
     init(data: Result) {
         self.cellTitle = data.stitle
         self.description = data.xbody
+        self.imageURL = data.file
     }
     
     func fetchData(completionHandler: @escaping (([Result])->Void)) {
