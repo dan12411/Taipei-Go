@@ -30,10 +30,9 @@ class TouristSiteTableViewCell: UITableViewCell, BindView {
     
     func bindViewModel(_ dataModel: Any) {
         guard let viewModel = dataModel as? TouristSiteViewModel else { return }
-        titleLabel.text = viewModel.cellTitle
-        descriptionLabel.text = viewModel.description
+        self.titleLabel.text = viewModel.cellTitle
+        self.descriptionLabel.text = viewModel.description
         
-        DispatchQueue.main.async {
             let imageKey: String = "http://www.travel.taipei/d_upload_ttn/sceneadmin/"
             self.imageURLs = viewModel.imageURL.components(separatedBy: imageKey)
             let urls = self.imageURLs.lazy
@@ -47,12 +46,11 @@ class TouristSiteTableViewCell: UITableViewCell, BindView {
                 self.imageViews.append(imageView)
                 collectionViewDataSource.append(CollectionViewModel(data: imageView))
             }
-            
+        DispatchQueue.main.async {
             self.collectionViewHelper = CollectionViewHelper(
                 collectionView: self.collectionView,
                 source: collectionViewDataSource ,
-                nibName: "CollectionViewCell",
-                selectionAction: nil
+                nibName: "CollectionViewCell"
             )
             
             if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -62,6 +60,17 @@ class TouristSiteTableViewCell: UITableViewCell, BindView {
             }
         }
         
+    }
+    
+    private func getCurrentVC() -> UIViewController? {
+        if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+            var currentController: UIViewController! = rootController
+            while( currentController.presentedViewController != nil ) {
+                currentController = currentController.presentedViewController
+            }
+            return currentController
+        }
+        return nil
     }
     
 }

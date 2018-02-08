@@ -12,9 +12,14 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    fileprivate lazy var touristSiteViewModel = TouristSiteViewModel()
-    fileprivate var dataSource: [Result] = []
+    fileprivate lazy var touristSiteViewModel = TouristSiteViewModel(page: 0)
+    fileprivate var tableViewDataSource: [TouristSiteViewModel] = []
     fileprivate var tableHelper: TableViewHelper?
+    
+    @objc func selectionAction() {
+        let detailViewController = DetailViewController.instance()
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
     
     fileprivate func addNotification() {
         Notifier.NetworkConnection.addObserver(by: self, with: #selector(networkConnection), object: nil)
@@ -34,14 +39,28 @@ class MainViewController: UIViewController {
         }
     }
     
-    @objc func networkConnection() {
+    fileprivate func loadMore() {
+        self.touristSiteViewModel.page += 1
+        
         self.touristSiteViewModel.fetchData { [unowned self] data in
-            self.dataSource = data
-            let tableViewDataSource: [TouristSiteViewModel] = data.map { TouristSiteViewModel(data: $0) }
+            let newData = data.map { TouristSiteViewModel(data: $0) }
+            self.tableViewDataSource.append(contentsOf: newData)
             self.tableHelper = TableViewHelper(
                 tableView: self.tableView,
                 nibName: "TouristSiteTableViewCell",
-                source: tableViewDataSource as [AnyObject])
+                source: self.tableViewDataSource as [AnyObject])
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc func networkConnection() {
+        self.touristSiteViewModel.fetchData { [unowned self] data in
+            self.tableViewDataSource = data.map { TouristSiteViewModel(data: $0) }
+            self.tableHelper = TableViewHelper(
+                tableView: self.tableView,
+                nibName: "TouristSiteTableViewCell",
+                source: self.tableViewDataSource as [AnyObject]
+            )
             self.tableView.reloadData()
         }
     }

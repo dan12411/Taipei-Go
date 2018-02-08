@@ -45,15 +45,16 @@ public class DataTaipei {
     
     public enum Entertainment: RequestComposer {
         
-        case TouristSites(rid: String, limit: Int)
+        case TouristSites(rid: String, limit: Int, offset: Int)
         
         public var queryItems: [URLQueryItem]? {
             switch self {
-            case let .TouristSites(rid, limit):
+            case let .TouristSites(rid, limit, offset):
                 let scopeQuery = URLQueryItem(name: "scope", value: "resourceAquire")
                 let ridQuery = URLQueryItem(name: "rid", value: rid)
                 let limitQuery = URLQueryItem(name: "limit", value: String(limit))
-                return [scopeQuery, ridQuery, limitQuery]
+                let offsetQuery = URLQueryItem(name: "offset", value: String(offset))
+                return [scopeQuery, ridQuery, limitQuery, offsetQuery]
             }
         }
     }
