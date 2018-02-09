@@ -39,28 +39,22 @@ class MainViewController: UIViewController {
         }
     }
     
-    fileprivate func loadMore() {
-        self.touristSiteViewModel.page += 1
-        
-        self.touristSiteViewModel.fetchData { [unowned self] data in
-            let newData = data.map { TouristSiteViewModel(data: $0) }
-            self.tableViewDataSource.append(contentsOf: newData)
-            self.tableHelper = TableViewHelper(
-                tableView: self.tableView,
-                nibName: "TouristSiteTableViewCell",
-                source: self.tableViewDataSource as [AnyObject])
-            self.tableView.reloadData()
-        }
-    }
-    
     @objc func networkConnection() {
         self.touristSiteViewModel.fetchData { [unowned self] data in
             self.tableViewDataSource = data.map { TouristSiteViewModel(data: $0) }
             self.tableHelper = TableViewHelper(
                 tableView: self.tableView,
                 nibName: "TouristSiteTableViewCell",
-                source: self.tableViewDataSource as [AnyObject]
-            )
+                source: self.tableViewDataSource as [AnyObject],
+                loadMoreAction: {
+                    self.touristSiteViewModel.page += 1
+                    
+                    self.touristSiteViewModel.fetchData { [unowned self] data in
+                        let newData = data.map { TouristSiteViewModel(data: $0) }
+                        self.tableViewDataSource.append(contentsOf: newData)
+                        self.tableHelper?.reloadData = self.tableViewDataSource
+                    }
+            })
             self.tableView.reloadData()
         }
     }

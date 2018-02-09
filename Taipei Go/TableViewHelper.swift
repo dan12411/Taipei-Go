@@ -41,7 +41,18 @@ class TableViewHelper: NSObject {
         }
     }
     
-    init(tableView: UITableView, nibName: String, source: [AnyObject], sectionCount: Int = 1, sectionNib: String? = nil, sectionSource: [AnyObject]? = nil, selectAction: ((Int)->())? = nil, refreshAction: ((Int)->())? = nil) {
+    init(
+        tableView:      UITableView,
+        nibName:        String,
+        source:         [AnyObject],
+        sectionCount:   Int = 1,
+        sectionNib:     String? = nil,
+        sectionSource:  [AnyObject]? = nil,
+        selectAction:   ((Int)->())? = nil,
+        refreshAction:  ((Int)->())? = nil,
+        loadMoreAction: (()->())? = nil
+        )
+    {
         self.tableView = tableView
         
         let nib = UINib(nibName: nibName, bundle: nil)
@@ -58,6 +69,7 @@ class TableViewHelper: NSObject {
         dataSource.data = source
         dataSource.selectAction = selectAction
         dataSource.refreshAction = refreshAction
+        dataSource.loadMoreAction = loadMoreAction
         dataSource.flag = true
         dataSource.sectionCount = sectionCount
         
@@ -78,18 +90,19 @@ class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     fileprivate let templateCell: UITableViewCell
     var templateHeader: UITableViewHeaderFooterView?
-    var sectionCount: Int = 1
-    var data: [AnyObject]
-    var headerData: [AnyObject]?
-    var selectAction: ((Int)->())?
-    var refreshAction: ((Int)->())?
-    var flag: Bool = true
     var sectionNibIsExisted: Bool = false
+    var flag:           Bool = true
+    var sectionCount:   Int = 1
+    var data:           [AnyObject]
+    var headerData:     [AnyObject]?
+    var selectAction:   ((Int)->())?
+    var refreshAction:  ((Int)->())?
+    var loadMoreAction: (()->())?
     
     init(data: [AnyObject], templateCell: UITableViewCell, selectAction: ((Int)->())? = nil) {
         self.data = data
-        self.templateCell = templateCell
-        self.selectAction = selectAction
+        self.templateCell   = templateCell
+        self.selectAction   = selectAction
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -117,6 +130,7 @@ class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
                 reactiveView.bindViewModel(data[indexPath.row])
             }
         }
+
         return cell
     }
     
@@ -165,6 +179,18 @@ class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
                 refreshAction(page)
                 flag = false
             }
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= 10.0 {
+            print("loadMore()")
+            guard let action = loadMoreAction else { return }
+            action()
         }
     }
     
