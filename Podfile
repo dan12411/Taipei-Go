@@ -8,6 +8,7 @@ target 'Taipei Go' do
   # Pods for Taipei Go
     pod 'Alamofire', '~> 4.0'
     pod 'Kingfisher', '~> 4.6'
+    pod 'MBProgressHUD', '~> 1.1.0'
 
   target 'Taipei GoTests' do
     inherit! :search_paths
