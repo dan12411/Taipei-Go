@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class MainViewController: UIViewController {
     
@@ -40,6 +41,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func networkConnection() {
+        HUD.show(.progress)
         self.touristSiteViewModel.fetchData { [unowned self] data in
             self.tableViewDataSource = data.map { TouristSiteViewModel(data: $0) }
             self.tableHelper = TableViewHelper(
@@ -48,14 +50,16 @@ class MainViewController: UIViewController {
                 source: self.tableViewDataSource as [AnyObject],
                 loadMoreAction: {
                     self.touristSiteViewModel.page += 1
-                    
+                    HUD.show(.progress)
                     self.touristSiteViewModel.fetchData { [unowned self] data in
                         let newData = data.map { TouristSiteViewModel(data: $0) }
                         self.tableViewDataSource.append(contentsOf: newData)
                         self.tableHelper?.reloadData = self.tableViewDataSource
+                        HUD.hide()
                     }
             })
             self.tableView.reloadData()
+            HUD.hide()
         }
     }
     

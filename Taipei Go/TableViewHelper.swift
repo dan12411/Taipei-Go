@@ -188,7 +188,6 @@ class DataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         
         if maximumOffset - currentOffset <= 10.0 {
-            print("loadMore()")
             guard let action = loadMoreAction else { return }
             action()
         }
