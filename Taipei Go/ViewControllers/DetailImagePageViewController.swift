@@ -35,7 +35,6 @@ class DetailImagePageViewController: UIViewController {
         self.loadScrollViewWithPage(page:1)
         
         setUpPageControl()
-        print(pageCount)
     }
     
 }
@@ -54,7 +53,7 @@ extension DetailImagePageViewController: UIScrollViewDelegate {
                 height: 300
                 ))
             
-            imageView.contentMode = .scaleAspectFit
+            imageView.contentMode = .scaleToFill
             imageView.image = self.imageViews[page].image
             self.scrollView.addSubview(imageView)
             self.pageDic[page] = imageView

@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrV-cf-amY">
-                                                    <rect key="frame" x="0.0" y="11" width="375" height="278"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
                                                     <connections>
                                                         <segue destination="Uvr-u7-1MF" kind="embed" identifier="toDetailImages" id="DNs-qe-Y9p"/>
                                                     </connections>
@@ -39,10 +39,11 @@
                                             <constraints>
                                                 <constraint firstItem="lrV-cf-amY" firstAttribute="leading" secondItem="Brv-CH-UcN" secondAttribute="leading" id="84h-tF-Tc6"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="lrV-cf-amY" secondAttribute="bottom" id="L3x-bw-6fl"/>
-                                                <constraint firstItem="lrV-cf-amY" firstAttribute="top" secondItem="Brv-CH-UcN" secondAttribute="topMargin" id="SRt-hd-hj5"/>
+                                                <constraint firstItem="lrV-cf-amY" firstAttribute="top" secondItem="Brv-CH-UcN" secondAttribute="top" id="SRt-hd-hj5"/>
                                                 <constraint firstAttribute="trailing" secondItem="lrV-cf-amY" secondAttribute="trailing" id="VCa-Dw-Hzs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92538958787918091" green="0.92554813623428345" blue="0.92537957429885864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="cLK-M0-snD">
                                         <rect key="frame" x="0.0" y="300" width="375" height="76"/>
@@ -126,11 +127,11 @@
             <objects>
                 <viewController id="Uvr-u7-1MF" customClass="DetailImagePageViewController" customModule="Taipei_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fyn-28-mk2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-WA-hsZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
                                 <connections>
                                     <outlet property="delegate" destination="Uvr-u7-1MF" id="CMv-Fu-4Nc"/>
                                 </connections>
