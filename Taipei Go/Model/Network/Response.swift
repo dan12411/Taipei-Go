@@ -23,4 +23,5 @@ public struct Result: Codable {
     var stitle: String
     var xbody: String
     var file: String
+    var RowNumber: String
 }

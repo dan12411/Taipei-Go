@@ -25,6 +25,7 @@
 		568A536E2020554400268DBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A536D2020554400268DBE /* DetailViewController.swift */; };
 		568A53702020555E00268DBE /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568A536F2020555E00268DBE /* DetailViewController.storyboard */; };
 		56ADF6142022C12C009EEA47 /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ADF6132022C12C009EEA47 /* Notifier.swift */; };
+		56C67A8C2035E625000ED32D /* DetailImagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A8B2035E625000ED32D /* DetailImagePageViewController.swift */; };
 		56D6A0A12022EA3500DADE2A /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6A0A02022EA3500DADE2A /* TableViewHelper.swift */; };
 		56D6A0A42022EB5200DADE2A /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6A0A22022EB5200DADE2A /* TouristSiteTableViewCell.swift */; };
 		56D6A0A52022EB5200DADE2A /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */; };
@@ -68,6 +69,7 @@
 		568A536D2020554400268DBE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		568A536F2020555E00268DBE /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		56ADF6132022C12C009EEA47 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
+		56C67A8B2035E625000ED32D /* DetailImagePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImagePageViewController.swift; sourceTree = "<group>"; };
 		56D6A0A02022EA3500DADE2A /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		56D6A0A22022EB5200DADE2A /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		56D6A0A32022EB5200DADE2A /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				568A536D2020554400268DBE /* DetailViewController.swift */,
 				568A534D202044C400268DBE /* MainViewController.storyboard */,
 				568A534B202044C400268DBE /* MainViewController.swift */,
+				56C67A8B2035E625000ED32D /* DetailImagePageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				5663FEB820219A5F004EA8A0 /* NetworkService.swift in Sources */,
 				566FBF562021C0B000E52830 /* NetworkChecker.swift in Sources */,
 				568A536E2020554400268DBE /* DetailViewController.swift in Sources */,
+				56C67A8C2035E625000ED32D /* DetailImagePageViewController.swift in Sources */,
 				56F2DFFE20298DDB00A15067 /* UIStoryboard+Addition.swift in Sources */,
 				5663FEB420219795004EA8A0 /* DataTaipei.swift in Sources */,
 				56D6A0A42022EB5200DADE2A /* TouristSiteTableViewCell.swift in Sources */,

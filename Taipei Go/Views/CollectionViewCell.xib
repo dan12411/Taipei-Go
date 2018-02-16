@@ -22,26 +22,18 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9i6-vV-658">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN8-ap-fRj">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
-                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="LN8-ap-fRj" firstAttribute="trailing" secondItem="9i6-vV-658" secondAttribute="trailing" id="260-J2-gca"/>
                 <constraint firstItem="9i6-vV-658" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="B4G-df-sXE"/>
                 <constraint firstItem="9i6-vV-658" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dof-qG-r69"/>
-                <constraint firstItem="LN8-ap-fRj" firstAttribute="bottom" secondItem="9i6-vV-658" secondAttribute="bottom" id="exj-ba-zaU"/>
                 <constraint firstAttribute="trailing" secondItem="9i6-vV-658" secondAttribute="trailing" id="hk6-HO-wOf"/>
-                <constraint firstItem="LN8-ap-fRj" firstAttribute="leading" secondItem="9i6-vV-658" secondAttribute="leading" id="inf-Ux-LWU"/>
                 <constraint firstAttribute="bottom" secondItem="9i6-vV-658" secondAttribute="bottom" id="sIy-JV-Aj4"/>
-                <constraint firstItem="LN8-ap-fRj" firstAttribute="top" secondItem="9i6-vV-658" secondAttribute="top" id="xdy-5Q-5CJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="112" height="92"/>
             <connections>
                 <outlet property="imageView" destination="9i6-vV-658" id="Qwk-xf-wmt"/>
-                <outlet property="touchButton" destination="LN8-ap-fRj" id="wil-cg-Uf3"/>
             </connections>
             <point key="canvasLocation" x="42" y="-25"/>
         </collectionViewCell>

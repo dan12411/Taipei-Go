@@ -13,7 +13,7 @@ public struct NetworkRequest {
     
     private static let sessionConfig: URLSessionConfiguration = {
         let sessionConfig = URLSessionConfiguration.default
-        sessionConfig.timeoutIntervalForRequest = 20
+        sessionConfig.timeoutIntervalForRequest = 30
         return sessionConfig
     }()
     

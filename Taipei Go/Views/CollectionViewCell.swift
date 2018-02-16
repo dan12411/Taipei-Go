@@ -11,12 +11,10 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell, BindView {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var touchButton: UIButton!
     
     func bindViewModel(_ dataModel: Any) {
         guard let viewModel = dataModel as? CollectionViewModel else { return }
         self.imageView.image = viewModel.image
-        self.touchButton.addTarget(nil, action: #selector(MainViewController.selectionAction), for: .touchUpInside)
     }
 
 }

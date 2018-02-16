@@ -17,11 +17,6 @@ class MainViewController: UIViewController {
     fileprivate var tableViewDataSource: [TouristSiteViewModel] = []
     fileprivate var tableHelper: TableViewHelper?
     
-    @objc func selectionAction() {
-        let detailViewController = DetailViewController.instance()
-        self.navigationController?.pushViewController(detailViewController, animated: true)
-    }
-    
     fileprivate func addNotification() {
         Notifier.NetworkConnection.addObserver(by: self, with: #selector(networkConnection), object: nil)
         Notifier.NetworkDisconnection.addObserver(by: self, with: #selector(networkDisconnection), object: nil)
@@ -44,6 +39,7 @@ class MainViewController: UIViewController {
         HUD.show(.progress)
         self.touristSiteViewModel.fetchData { [unowned self] data in
             self.tableViewDataSource = data.map { TouristSiteViewModel(data: $0) }
+
             self.tableHelper = TableViewHelper(
                 tableView: self.tableView,
                 nibName: "TouristSiteTableViewCell",
@@ -67,18 +63,35 @@ class MainViewController: UIViewController {
         NetworkChecker.shared.showAlert(from: self)
     }
     
+    fileprivate func setupUI() {
+        self.title = touristSiteViewModel.title
+        let backButton = UIBarButtonItem(title: "", style:.plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
+    }
+    
     // MARK: - Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = touristSiteViewModel.title
+        setupUI()
         addNotification()
         checkNetworkStatus()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDetail") {
+            if let detailVC = segue.destination as? DetailViewController,
+                let indexString = sender as? String,
+                let index = Int(indexString)
+            {
+                detailVC.dataSource = tableViewDataSource[index-1]
+            }
+        }
     }
     
     deinit{

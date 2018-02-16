@@ -6,7 +6,8 @@
 //  Copyright © 2018 Dan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Kingfisher
 
 class TouristSiteViewModel {
     
@@ -16,6 +17,8 @@ class TouristSiteViewModel {
     var cellTitle: String = ""
     var description: String = ""
     var imageURL: String = ""
+    var imageViews: [UIImageView] = []
+    var rowNumber: String = ""
     
     init(page: Int) {
         self.page = page
@@ -25,6 +28,19 @@ class TouristSiteViewModel {
         self.cellTitle = data.stitle
         self.description = data.xbody
         self.imageURL = data.file
+        self.rowNumber = data.RowNumber
+        
+        let imageKey: String = "http://www.travel.taipei/d_upload_ttn/sceneadmin/"
+        let imageURLs = self.imageURL.components(separatedBy: imageKey)
+        let urls = imageURLs.lazy
+            .filter { $0.contains(".jpg") || $0.contains(".JPG") }
+            .flatMap { URL(string: imageKey + $0) }
+        
+        urls.forEach {
+            let imageView = UIImageView()
+            imageView.kf.setImage(with: $0)
+            self.imageViews.append(imageView)
+        }
     }
     
     func fetchData(completionHandler: @escaping (([Result])->Void)) {

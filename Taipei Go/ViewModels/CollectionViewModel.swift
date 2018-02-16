@@ -13,7 +13,7 @@ class CollectionViewModel {
     
     var image: UIImage?
     
-    init(data: UIImageView) {
-        self.image = data.image
+    init(imageView: UIImageView) {
+        self.image = imageView.image
     }
 }
