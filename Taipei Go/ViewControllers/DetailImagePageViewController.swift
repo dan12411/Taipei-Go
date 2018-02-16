@@ -19,10 +19,28 @@ class DetailImagePageViewController: UIViewController {
     var pageDic = [Int:UIImageView]()
     var pageControl: UIPageControl!
     
+    @objc private func pageChanged(_ sender: UIPageControl) {
+        let page = sender.currentPage
+        print(sender.currentPage)
+        self.loadScrollViewWithPage(page: page - 1)
+        self.loadScrollViewWithPage(page: page)
+        self.loadScrollViewWithPage(page: page + 1)
+        
+        self.removeScrollViewWithPage(page: page - 2)
+        self.removeScrollViewWithPage(page: page + 2)
+        
+        var frame = scrollView.frame
+        frame.origin.x = frame.size.width * CGFloat(page)
+        frame.origin.y = 0
+        
+        scrollView.scrollRectToVisible(frame, animated: true)
+    }
+    
     private func setUpPageControl() {
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 100))
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: 250, width: self.view.frame.width, height: 50))
         pageControl.numberOfPages = pageCount
         self.view.addSubview(pageControl)
+        pageControl.addTarget(self, action: #selector(pageChanged(_:)), for: .valueChanged)
     }
     
     override func viewDidLoad() {
@@ -69,7 +87,7 @@ extension DetailImagePageViewController: UIScrollViewDelegate {
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x - pageWidth / 2) /
             pageWidth)) + 1
