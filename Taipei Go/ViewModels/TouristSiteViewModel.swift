@@ -1,5 +1,5 @@
 //
-//  DataTaipeiViewModel.swift
+//  TouristSiteViewModel.swift
 //  Taipei Go
 //
 //  Created by 洪德晟 on 31/01/2018.
